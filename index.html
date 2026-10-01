@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord Krishna School - Barkheda Panth</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #333; background-color: #f9f9f9; scroll-behavior: smooth; }
+        
+        /* Navigation Bar */
+        nav { background: #0b3c5d; color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-area img { height: 50px; width: auto; background: white; padding: 2px; border-radius: 5px; }
+        .logo-area h1 { font-size: 20px; letter-spacing: 1px; }
+        .nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 15px; transition: 0.3s; }
+        .nav-links a:hover { color: #f5a623; }
+        .erp-btn { background: #f5a623; padding: 8px 15px; border-radius: 5px; color: #0b3c5d !important; font-weight: bold !important; }
+        .erp-btn:hover { background: white; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(11, 60, 93, 0.9), rgba(11, 60, 93, 0.9)), url('school-bg.jpg') no-repeat center center/cover; padding: 80px 5%; text-align: center; color: white; }
+        .hero img { height: 120px; margin-bottom: 20px; background: white; padding: 5px; border-radius: 10px; }
+        .hero h2 { font-size: 42px; margin-bottom: 10px; color: #f5a623; }
+        .hero p { font-size: 18px; max-width: 700px; margin: 0 auto 20px; line-height: 1.6; }
+        .admission-btn { display: inline-block; background: #d9534f; color: white; padding: 12px 30px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 25px; box-shadow: 0 4px 15px rgba(217, 83, 79, 0.4); transition: 0.3s; margin-top: 15px; }
+        .admission-btn:hover { background: white; color: #d9534f; transform: translateY(-3px); }
+
+        /* Sections */
+        .section { padding: 60px 20px; text-align: center; max-width: 1100px; margin: 0 auto; }
+        .section h3 { font-size: 28px; color: #0b3c5d; margin-bottom: 30px; position: relative; padding-bottom: 10px; }
+        .section h3::after { content: ''; width: 60px; height: 3px; background: #f5a623; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        
+        /* Grid Layouts */
+        .grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+        .card { background: white; border-radius: 8px; padding: 25px; width: 320px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid #0b3c5d; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .card h4 { color: #0b3c5d; margin-bottom: 10px; font-size: 18px; }
+        .card p { font-size: 14px; line-height: 1.5; color: #666; }
+
+        /* ERP Section */
+        .erp-section { background: #eef3f7; border-radius: 12px; padding: 40px 20px; margin-top: 20px; }
+        .erp-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+        .erp-link-btn { background: white; border: 2px solid #0b3c5d; color: #0b3c5d; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 6px; font-size: 15px; display: flex; align-items: center; gap: 10px; transition: 0.3s; min-width: 250px; justify-content: center; }
+        .erp-link-btn:hover { background: #0b3c5d; color: white; }
+
+        /* Contact & Buttons */
+        .contact-info { text-align: left; max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .contact-info p { margin-bottom: 12px; font-size: 16px; line-height: 1.5; }
+        .contact-info strong { color: #0b3c5d; }
+        
+        .social-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 30px; }
+        .btn-wa { background: #25D366; color: white; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-insta { background: #E1306C; color: white; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-wa:hover, .btn-insta:hover { opacity: 0.85; transform: scale(1.02); }
+
+        footer { background: #0b3c5d; color: white; text-align: center; padding: 20px; font-size: 14px; margin-top: 50px; }
+        
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 15px; padding: 15px; text-align: center; }
+            .nav-links { flex-direction: column; gap: 10px; width: 100%; }
+            .hero h2 { font-size: 30px; }
+            .card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="LKS Logo">
+            <h1>LORD KRISHNA SCHOOL</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#erp">ERP Portal</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="https://school.scientificstudy.in" target="_blank" class="erp-btn">🔒 Quick ERP Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Hero Banner -->
+    <div class="hero" id="home">
+        <img src="logo.png" alt="Lord Krishna School Logo">
+        <h2>LORD KRISHNA SCHOOL</h2>
+        <p>Mhow-Neemuch Road, Barkheda Panth, Pipliya Mandi, Mandsaur<br><strong>"Shaping Minds, Building Futures" (उज्जवल भविष्य का आधार)</strong></p>
+        <p>लॉर्ड कृष्णा स्कूल में आपका स्वागत है। हमारा उद्देश्य ग्रामीण और अर्ध-शहरी क्षेत्र के बच्चों को आधुनिक, संस्कारयुक्त और उच्च गुणवत्ता वाली शिक्षा प्रदान करना है। हम बच्चों के सर्वांगीण विकास पर विशेष ध्यान देते हैं।</p>
+        <a href="https://wa.me." target="_blank" class="admission-btn">Admission Open 2026-27</a>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="section" id="about">
+        <h3>About Our School (हमारे बारे में)</h3>
+        <div style="text-align: left; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px;">
+            <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;"><strong>हमारा उद्देश्य (Our Vision):</strong> एक ऐसा सुरक्षित और प्रेरणादायक माहौल तैयार करना जहाँ हर बच्चा अपनी पूरी क्षमता को पहचान सके और समाज का एक जिम्मेदार नागरिक बन सके।</p>
+            <p style="font-size: 16px; line-height: 1.6;"><strong>मान्यता और विश्वसनीयता (Affiliation):</strong> लॉर्ड कृष्णा स्कूल मध्य प्रदेश शासन के नियमानुसार पूरी तरह मान्यता प्राप्त (Recognized) संस्था है, जो शिक्षा के सभी मानकों को पूरा करती है।</p>
+        </div>
+        
+        <h4>मुख्य विशेषताएं (Why Choose Us?)</h4>
+        <div class="grid">
+            <div class="card">
+                <h4>👨‍🏫 अनुभवी शिक्षक</h4>
+                <p>बच्चों के बेहतरीन मार्गदर्शन के लिए अनुभवी और समर्पित शिक्षक (Experienced Faculty)।</p>
+            </div>
+            <div class="card">
+                <h4>🛡️ सुरक्षित वातावरण</h4>
+                <p>विद्यार्थियों के लिए पूरी तरह से सुरक्षित और अनुशासित माहौल (Safe & Disciplined Campus)।</p>
+            </div>
+            <div class="card">
+                <h4>🎯 व्यक्तिगत ध्यान</h4>
+                <p>कमजोर छात्रों के विकास के लिए उन पर विशेष व्यक्तिगत ध्यान (Personal Attention) दिया जाता है।</p>
+            </div>
+            <div class="card">
+                <h4>🏆 सर्वांगीण विकास</h4>
+                <p>पढ़ाई के साथ-साथ खेलकूद और सांस्कृतिक गतिविधियां (Co-curricular Activities) भी आयोजित की जाती हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academics Section -->
+    <div class="section" id="academics">
+        <h3>हमारे शैक्षणिक कार्यक्रम (Our Classes)</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>🧸 Primary Wing</h4>
+                <p><strong>Nursery to Class 5th</strong><br><br>खेल-खेल में आधुनिक शिक्षा और बच्चों की बुनियादी पकड़ को मजबूत बनाने पर विशेष ध्यान दिया जाता है।</p>
+            </div>
+            <div class="card">
+                <h4>📚 Middle Wing</h4>
+                <p><strong>Class 6th to 8th</strong><br><br>मजबूत वैचारिक समझ, व्यवहारिक ज्ञान और प्रैक्टिकल लर्निंग को बढ़ावा देकर विषय की ठोस तैयारी कराई जाती है।</p>
+            </div>
+            <div class="card">
+                <h4>🎓 Special Support Wing</h4>
+                <p><strong>Comprehensive Tuition Support (9th & 10th)</strong><br><br>कक्षा 9वीं और 10वीं के विद्यार्थियों के लिए बोर्ड परीक्षाओं में बेहतरीन प्रदर्शन हेतु विशेष मार्गदर्शन और ट्यूशन क्लासेस।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ERP Portal Integration Section -->
+    <div class="section" id="erp">
+        <h3>School ERP Portal</h3>
+        <div class="erp-section">
+            <p style="font-size: 16px; margin-bottom: 10px;">स्कूल एडमिनिस्ट्रेशन, अकाउंट्स, ऑनलाइन फीस, टाइम-टेबल, ट्रांसपोर्ट और स्टूडेंट रिजल्ट्स को एक्सेस करने के लिए नीचे दिए गए पोर्टल पर लॉगिन करें:</p>
+            <div class="erp-grid">
+                <a href="https://school.scientificstudy.in" target="_blank" class="erp-link-btn">👨‍💼 Administration Login</a>
+                <a href="https://school.scientificstudy.in/onlinefeePayment" target="_blank" class="erp-link-btn">💳 Accounts & Fees Portal</a>
